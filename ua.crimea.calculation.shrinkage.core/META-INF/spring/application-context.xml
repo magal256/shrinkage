@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd 
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd 
+           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd 
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+     <bean id="matterManager" class="org.southplast.calculation.shrinkage.core.management.MatterServiceImpl">
+<!--      	<property name="groupDao" ref="matterGroupDao"/> -->
+<!--      	<property name="workmanshipDao" ref="workmanshipDao"/> -->
+<!--      	<property name="matterDao" ref="matterDao"/> -->
+<!--      	<property name="detailDao" ref="detailDao"/> -->
+<!--      	<property name="calculationDao" ref="calculationDao"/> -->
+     </bean>
+     
+     <bean id="propertyManager" class="org.southplast.calculation.shrinkage.core.management.PropertyServiceImpl">
+     </bean>
+     
+      <bean id="detailDao" class="org.southplast.calculation.shrinkage.core.repository.dao.JdbcDetailDao">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+     
+     <bean id="matterGroupDao" class="org.southplast.calculation.shrinkage.core.repository.dao.JdbcMatterGroupDao">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+     
+     <bean id="workmanshipDao" class="org.southplast.calculation.shrinkage.core.repository.dao.JdbcWorkmanshipDao">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+     
+     <bean id="matterDao" class="org.southplast.calculation.shrinkage.core.repository.dao.JdbcMatterDao">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+      <bean id="calculationDao" class="org.southplast.calculation.shrinkage.core.repository.dao.JdbcShrinkageCalculationDao">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+     <bean id="propertyDao" class="org.southplast.calculation.shrinkage.core.repository.dao.JdbcPropertiesDao">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    
+     <bean id="dataSource" class="org.southplast.calculation.shrinkage.core.repository.dao.HsqldbDataSource" destroy-method="close">
+     	<property name="url" value="jdbc:hsqldb:hsql://localhost/xdb"/>
+     	<property name="username" value="sa"/>
+     	<property name="password" value=""/>
+     </bean>
+     
+     <bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>		
+	
+	 <tx:annotation-driven transaction-manager="transactionManager" mode="proxy" />
+	
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+    	 <tx:attributes>
+            <tx:method name="*" rollback-for="Throwable"/>
+        </tx:attributes>
+    </tx:advice>
+	
+	 <!-- Autowiring -->
+    <context:annotation-config/>
+</beans>

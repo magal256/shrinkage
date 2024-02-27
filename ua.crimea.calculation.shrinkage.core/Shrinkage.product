@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="Shrinkage" id="org.southplast.calculation.shrinkage.core.ShrinkageProduct" application="org.southplast.calculation.shrinkage.core.application" useFeatures="false" includeLaunchers="true">
+
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-encoding UTF-8</programArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+   </launcherArgs>
+
+   <windowImages i16="/org.southplast.calculation.shrinkage.core/icons/Stationery_16.png" i32="/org.southplast.calculation.shrinkage.core/icons/Stationery32.png" i48="/org.southplast.calculation.shrinkage.core/icons/Stationery_16.png" i64="/org.southplast.calculation.shrinkage.core/icons/Stationery_64.png"/>
+
+   <splash
+      location="org.southplast.calculation.shrinkage.core"
+      handlerType="extensible" />
+   <launcher name="shrinkage">
+      <solaris/>
+      <win useIco="true">
+         <ico path="/org.southplast.calculation.shrinkage.core/Stationery_64.ico"/>
+         <bmp
+            winSmallHigh="/ua.crimea.calculation.shrinkage.core/Stationery_16 копия.bmp"
+            winSmallLow="/ua.crimea.calculation.shrinkage.core/Stationery_16_8 копия.bmp"
+            winMediumHigh="/ua.crimea.calculation.shrinkage.core/Stationery_32 копия.bmp"
+            winMediumLow="/ua.crimea.calculation.shrinkage.core/Stationery_32_8 копия.bmp"
+            winLargeHigh="/ua.crimea.calculation.shrinkage.core/Stationery_48 копия.bmp"
+            winLargeLow="/ua.crimea.calculation.shrinkage.core/Stationery_48_8 копия.bmp"/>
+      </win>
+   </launcher>
+
+
+   <vm>
+      <linux include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/CDC-1.0%Foundation-1.0</linux>
+      <windows include="true">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/CDC-1.1%Foundation-1.1</windows>
+   </vm>
+
+   <license>
+        <url>license.html</url>
+   </license>
+
+   <plugins>
+      <plugin id="com.ibm.icu"/>
+      <plugin id="com.springsource.org.aopalliance"/>
+      <plugin id="com.springsource.org.apache.commons.logging"/>
+      <plugin id="org.apache.commons.collections"/>
+      <plugin id="org.apache.commons.dbcp"/>
+      <plugin id="org.apache.commons.logging"/>
+      <plugin id="org.apache.commons.pool"/>
+      <plugin id="org.eclipse.core.commands"/>
+      <plugin id="org.eclipse.core.commands.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.core.contenttype"/>
+      <plugin id="org.eclipse.core.contenttype.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.core.databinding"/>
+      <plugin id="org.eclipse.core.databinding.beans"/>
+      <plugin id="org.eclipse.core.databinding.beans.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.core.databinding.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.core.databinding.observable"/>
+      <plugin id="org.eclipse.core.databinding.observable.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.core.databinding.property"/>
+      <plugin id="org.eclipse.core.databinding.property.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.core.expressions"/>
+      <plugin id="org.eclipse.core.expressions.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.core.jobs"/>
+      <plugin id="org.eclipse.core.jobs.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.core.runtime"/>
+      <plugin id="org.eclipse.core.runtime.compatibility.registry" fragment="true"/>
+      <plugin id="org.eclipse.core.runtime.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.equinox.app"/>
+      <plugin id="org.eclipse.equinox.app.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.equinox.common"/>
+      <plugin id="org.eclipse.equinox.common.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.equinox.ds"/>
+      <plugin id="org.eclipse.equinox.launcher"/>
+      <plugin id="org.eclipse.equinox.launcher.carbon.macosx" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.cocoa.macosx" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.cocoa.macosx.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.gtk.aix.ppc" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.gtk.aix.ppc64" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.gtk.hpux.ia64_32" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.gtk.linux.ppc64" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.gtk.linux.s390" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.gtk.linux.s390x" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.gtk.linux.x86" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.gtk.linux.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.gtk.solaris.sparc" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.gtk.solaris.x86" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.source"/>
+      <plugin id="org.eclipse.equinox.launcher.win32.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.win32.win32.x86.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.win32.win32.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.equinox.launcher.win32.win32.x86_64.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.equinox.preferences"/>
+      <plugin id="org.eclipse.equinox.preferences.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.equinox.registry"/>
+      <plugin id="org.eclipse.equinox.registry.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.equinox.util"/>
+      <plugin id="org.eclipse.equinox.util.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.help"/>
+      <plugin id="org.eclipse.help.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.jface"/>
+      <plugin id="org.eclipse.jface.databinding"/>
+      <plugin id="org.eclipse.jface.databinding.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.jface.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.nebula.examples"/>
+      <plugin id="org.eclipse.nebula.widgets.calendarcombo"/>
+      <plugin id="org.eclipse.nebula.widgets.formattedtext"/>
+      <plugin id="org.eclipse.nebula.widgets.grid"/>
+      <plugin id="org.eclipse.nebula.widgets.pshelf"/>
+      <plugin id="org.eclipse.nebula.widgets.pshelf.example"/>
+      <plugin id="org.eclipse.nebula.widgets.tablecombo"/>
+      <plugin id="org.eclipse.nebula.widgets.xviewer"/>
+      <plugin id="org.eclipse.osgi"/>
+      <plugin id="org.eclipse.osgi.services"/>
+      <plugin id="org.eclipse.springframework.util"/>
+      <plugin id="org.eclipse.swt"/>
+      <plugin id="org.eclipse.swt.carbon.macosx" fragment="true"/>
+      <plugin id="org.eclipse.swt.cocoa.macosx" fragment="true"/>
+      <plugin id="org.eclipse.swt.cocoa.macosx.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.aix.ppc" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.aix.ppc64" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.hpux.ia64_32" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.linux.ppc64" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.linux.s390" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.linux.s390x" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.linux.x86" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.linux.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.solaris.sparc" fragment="true"/>
+      <plugin id="org.eclipse.swt.gtk.solaris.x86" fragment="true"/>
+      <plugin id="org.eclipse.swt.win32.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.swt.win32.win32.x86.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.swt.win32.win32.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.swt.win32.win32.x86_64.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.ui"/>
+      <plugin id="org.eclipse.ui.carbon" fragment="true"/>
+      <plugin id="org.eclipse.ui.cocoa" fragment="true"/>
+      <plugin id="org.eclipse.ui.forms"/>
+      <plugin id="org.eclipse.ui.forms.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.ui.nl_ru" fragment="true"/>
+      <plugin id="org.eclipse.ui.workbench"/>
+      <plugin id="org.eclipse.ui.workbench.nl_ru" fragment="true"/>
+      <plugin id="org.hamcrest.core"/>
+      <plugin id="org.hsqldb"/>
+      <plugin id="org.junit"/>
+      <plugin id="org.junit4"/>
+      <plugin id="org.southplast.calculation.shrinkage.core"/>
+      <plugin id="org.springframework.aop"/>
+      <plugin id="org.springframework.asm"/>
+      <plugin id="org.springframework.beans"/>
+      <plugin id="org.springframework.context"/>
+      <plugin id="org.springframework.context.support"/>
+      <plugin id="org.springframework.core"/>
+      <plugin id="org.springframework.expression"/>
+      <plugin id="org.springframework.jdbc"/>
+      <plugin id="org.springframework.orm"/>
+      <plugin id="org.springframework.osgi.core"/>
+      <plugin id="org.springframework.osgi.extender"/>
+      <plugin id="org.springframework.osgi.extensions.annotations"/>
+      <plugin id="org.springframework.osgi.io"/>
+      <plugin id="org.springframework.transaction"/>
+   </plugins>
+
+   <configurations>
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="4" />
+      <plugin id="org.springframework.osgi.extender" autoStart="true" startLevel="4" />
+   </configurations>
+
+</product>
