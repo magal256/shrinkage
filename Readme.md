@@ -8,7 +8,6 @@ The "calculation method" implements auxiliary formulas for diametrical external/
 
 Also available is reference information on the limit deviations of shafts and bores by qualitites from 4 to 17. 
 
-Translated with DeepL.com (free version)
 
 ## Pre-Requisites
 - Windows 7 - 11
