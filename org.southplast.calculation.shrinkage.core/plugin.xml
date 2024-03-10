@@ -758,7 +758,7 @@
          </property>
          <property
                name="windowImages"
-               value="icons/Stationery_16.png,icons/Stationery32.png,icons/Stationery_48.png,icons/Stationery_64.png">
+               value="icons/Stationery_16.png,icons/Stationery32.png,icons/Stationery_16.png,icons/Stationery_64.png">
          </property>
       </product>
    </extension>
